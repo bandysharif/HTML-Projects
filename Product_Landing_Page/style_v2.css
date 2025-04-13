@@ -1,0 +1,286 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+/* Color */
+:root {
+  --white-color: #fff;
+  --body-back-color: #f5ebe0;
+  --head-back-color: #333;
+  --icon-foot-color: #6f4e37;
+  --link-color: #d4a373;
+  --card-back-color: #f8f4f1;
+  --shadow-op1: rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Lato", "Arial", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-back-color);
+  letter-spacing: 1px;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--head-back-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px var(--shadow-op1);
+}
+
+#header-img {
+  height: 50px;
+  width: auto;
+}
+
+#nav-bar {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--link-color);
+}
+
+/* Main Content Sections */
+
+section {
+  padding: 5rem 2rem;
+  scroll-margin-top: 80px;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  margin-top: 80px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("pic/Yemen-Coffee-Beans-photo-x1.png");
+  background-size: cover;
+  color: var(--white-color);
+  padding: 8rem 2rem;
+}
+
+#hero p {
+  margin-top: 0.5rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#email {
+
+  padding: 0.8rem;
+  font-family: inherit;
+  /* width: 300px; */
+  width: 20rem;
+  border: none;
+  border-radius: 1.5rem;
+  /* border-radius: 25px; */
+}
+#email::placeholder {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--link-color);
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #b08f69;
+}
+
+/* Features Section */
+
+#features {
+  background-color: var(--card-back-color);
+  text-align: center;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 3rem auto 0 auto;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  padding: 1rem;
+  align-items: center;
+}
+
+.icon i {
+  font-size: 2.5rem;
+  color: var(--icon-foot-color);
+}
+
+/* Process Section */
+#process {
+  background-color: var(--body-back-color);
+  text-align: center;
+}
+
+#video {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+/* Pricing Section */
+#pricing {
+  background-color: var(--white-color);
+  text-align: center;
+}
+
+.price-cards {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.price-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background-color: var(--card-back-color);
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-op1);
+}
+
+.price-card h3 {
+  height: 2rem;
+  color: var(--icon-foot-color);
+  margin-bottom: 1rem;
+}
+
+.price-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+ul {
+  height: 10rem;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+ul li {
+  margin-top: 1rem;
+}
+button {
+  max-width: 10rem;
+  margin: auto;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--icon-foot-color);
+  color: var(--white-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature-container {
+    background-color: transparent;
+  }
+
+  .feature,
+  .price-cards {
+    grid-template-columns: 1fr;
+  }
+  .feature {
+    height: auto;
+    padding: 2rem;
+    background-color: var(--card-back-color);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .desc {
+    margin: 0.5rem;
+  }
+  #features {
+    background-color: var(--white-color);
+  }
+
+  #nav-bar {
+    gap: 1rem;
+  }
+
+  #header {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  ul,
+  .price-cards h3 {
+    height: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  html {
+    font-size: 18px;
+  }
+
+  .desc {
+    text-align: left;
+  }
+}
+xt-align: left;
+  }
+}

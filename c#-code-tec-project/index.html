@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="bandar alshreef">
+  <link rel="stylesheet" href="style_v3.css">
+
+  <title>C++ Documentation</title>
+</head>
+<body>
+  <nav id="navbar">
+    <header>C++ Documentation</header>
+    <ul>
+      <li><a class="nav-linl" href="#Interoduction">Interoduction</a></li>
+      <li><a class="nav-linl" href="#Facts_about_C++">Facts about C++</a></li>
+      <li><a class="nav-linl" href="#Structure_of_a_program">Structure of a program</a></li>
+      <li><a class="nav-linl" href="#Variables">Variables</a></li>
+      <li><a class="nav-linl" href="#Variables_Data_Type">Variables Data Type</a></li>
+      <li><a class="nav-linl" href="#Declaring_Variables">Declaring Variables</a></li>
+      <li><a class="nav-linl" href="#Introduction_To_Strings">Introduction To Strings</a></li>
+      <li><a class="nav-linl" href="#Constant_Variables">Constant Variables</a></li>
+      <li><a class="nav-linl" href="#Basic_Input_Output">Basic Input/Output</a></li>
+      <li><a class="nav-linl" href="#Operators">Operators</a></li>
+      <li><a class="nav-linl" href="#Statements_and_flow_control">Statements and flow control</a></li>
+      <li><a class="nav-linl" href="#Decision_Making">Decision Making</a></li>
+      <li><a class="nav-linl" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Interoduction">
+      <header>Introduction</header>
+      <article>
+        <p><span class="bold">C++</span> is general-purpose programming language that developed as an enhancement of the <span class="bold">C</span> language to include object-oriented paradigm. it is an imperative and <span class="bold">Compiled</span> language.
+        </p>
+        <p>
+          it was developed by <em>Bjarne Stroustrup</em> at Bell Labs in 1983 as an extension of C programming language. C++ is an object-oriented, multi-paradigm language that supports procedural, functional, and generic programming styles.
+        </p>
+        <p>C++ is a middle-level language rendering it the advantage of programming low-level (drivers, kernels) and even higher-level applications (games, GUI, desktop apps etc.). The basic syntax and code structure of both C and C++ are the same.
+        </p>
+        <p class="bold">here some of key features:</p>
+        <ul>
+          <li>support of low-level, system-level programming, making it suitable for developing operating systems, device drivers, and other system softwar. At the same time C++ also provides a rich set of libraries and features for higher-level application making it a popular choice for developing desktop application, video games, and other complex applications.</li>
+          <li>C++ has a large, active community of developers and users, and a wealth of resources and tools available for learning and using the language.</li>
+          <li>Object-Oriented Programming: C++ supports object-oriented programming, allowing developers to create classes and objects and to define methods and properties for these objects.</li>
+          <li>Templates: C++ templates allow developers to write generic code that can work with any data type, making it easier to write reusable and flexible code.</li>
+          <li>Exception Handling: C++ provides robust exception handling capabilities, making it easier to write code that can handle errors and unexpected situations.</li>
+        </ul>
+        <p>Overall, C++ is a powerful and versatile programming language that is widely used for a range of applications and is well-suited for both low-level system programming and high-level application development.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Facts_about_C++">
+      <header>Facts about C++</header>
+      <p class="bold">Hear are some awesome facts that may interest you:</p>
+      <ul>
+        <li>The name of C++ signifies the evolutionary nature of the changes from C. “++” is the C increment operator.</li>
+        <li>C++ is one of the predominant languages for the development of all kind of technical and commercial software.</li>
+        <li>C++ introduces Object-Oriented Programming, not present in C. Like other things, C++ supports the four primary features of OOP: encapsulation, polymorphism, abstraction, and inheritance.</li>
+        <li>C++ got the OOP features from Simula67 Programming language.</li>
+        <li>A function is a minimum requirement for a C++ program to run. at least <code>main()</code> function.</li>
+      </ul>
+      <p>TO Read More <a href="https://www.geeksforgeeks.org/interesting-facts-about-c/" target="_blink">Facts About C++</a>.</p>
+    </section>
+    <section class="main-section" id="Structure_of_a_program">
+      <header>Structure of a program</header>
+      <article>
+        <p>Typically, the first program beginners write is a program called <em>"Hello World"</em>, it is very simple, it contains all fundamental compomemts C++ programs have:
+        </p>
+        <div class="code-cont">
+          <div class="main-code box-m">
+            <code class="code-line">
+              <span class="lnum"><span class="comment">// my first program in C++</span></span>
+              <span class="lnum">#include <span class="italict">&lt;iostream&gt;</span></span>
+              <span class="lnum">&thinsp;</span>
+              <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span> 
+              <span class="lnum">{</span>
+              <span class="lnum">&#9;std::cout &lt;&lt; <span class="scode">"Hello World"</span>;</span>
+              <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+              <span class="lnum">}</span>
+            </code>
+          </div>
+          <div class="output box-m">
+            <samp><span>Hello World</span></samp>
+          </div>
+        </div>
+        <p>Let's examine this program line by line:</p>
+        <dl class="exp-list">
+          <dt><code>// my first program in C++</code> :</dt>
+          <dd>Two slash signs indicate that the rest of the line is a comment inserted by the programmer but which has no effect on the behavior of the program. Programmers use them to include short explanations or observations concerning the code or program. In this case, it is a brief introductory description of the program.</dd>
+         <dt><code>#include &lt;iostream&gt;</code> :</dt>
+          <dd>is a <strong>header file library</strong> that lets us work with input and output box-m objects, such as <code>cout</code> (used in line 5). Header files add functionality to C++ programs.</dd>
+         <dt>A blank line :</dt>
+          <dd>C++ ignores white space. But we use it to make the code more readable.</dd>
+           
+         <dt><code>int main()</code> :</dt>
+           <dd>Another thing that always appear in a C++ program is  This is called a <strong>function</strong>.</dd>
+           
+          <dt><code>{}</code> :</dt> 
+          <dd>Any code inside its curly bracketswill be executed.</dd>
+          
+         <dt><code>cout</code> :</dt>
+          <dd>(pronounced "see-out") is an object used together with the insertion operator (<code>&lt;&lt;</code>) to output/print text. In our example, it will output "<samp>Hello World!</samp>".</dd>
+           
+           <dt><code>return 0;</code> :</dt>
+           <dd>ends the main function.</dd>
+           <dt><code>}</code> :</dt>
+           <dd>Do not forget to add the closing curly bracket  to actually end the main function.</dd>
+        </dl>
+      </article>
+    </section>
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <article>
+        <p>programming is not limited only to printing simple texts on the screen. In order to go a little further on and to become able to write programs that perform useful tasks that really save us work, we need to introduce the concept of <span class="bold italict">variables</span>.
+        </p>
+        <p>Let's imagine that I ask you to remember the number 5, and then I ask you to also memorize the number 2 at the same time. You have just stored two different values in your memory (5 and 2). Now, if I ask you to add 1 to the first number I said, you should be retaining the numbers 6 (that is 5+1) and 2 in your memory. Then we could, for example, subtract these values and obtain 4 as result.
+        </p>
+        <p>We can now define <span class="italict">variable</span> as a portion of memory to store a value. Each variable needs a name that identifies it and distinguishes it from the others. For example, the variable names were a, b, and result, but we could have called the variables any names we could have come up with, as long as they were valid C++ identifiers.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Variables_Data_Type">
+      <header>Variables Data Type</header>
+      <article>
+        <p>
+          Each variable needs a name that identifies it and distinguishes it from the others. For example,the variable names were a, b, and result, but we could have called the variables any names we could have come up with, as long as they were valid C++ identifiers.
+        </p>
+        Fundamental data types are basic types implemented directly by the language that represent the basic storage units supported natively by most systems. They can mainly be classified into:
+        <ul>
+          <li>
+            <span class="bold">Character types:</span> They can represent a single character, such as 'A' or '$'. The most basic type is char, which is a one-byte character. Other types are also provided for wider characters.
+          </li>
+          <li>
+            <span class="bold">Numerical integer types:</span> They can store a whole number value, such as 7 or 1024. They exist in a variety of sizes, and can either be <span class="bold italict">signed</span> or <span class="bold italict">unsigned</span>, depending on whether they support negative values or not.
+          </li>
+          <li>
+            <span class="bold">Floating-point types:</span> They can represent real values, such as 3.14 or 0.01, with different levels of precision, depending on which of the three floating-point types is used.
+          </li>
+          <li>
+            <span class="bold">Boolean type:</span> The boolean type, known in C++ as bool, can only represent one of two states, true or false.
+          </li>
+        </ul>
+        <p>
+          C++ offers the programmer a rich assortment of built-in as well as user defined data types. there are different types of variables (defined with different keywords), for example:
+        </p>
+        <table>
+          <caption>basic C++ data types</caption>
+          <thead>
+            <tr>
+              <th scope="col">Type</th>
+              <th scope="col">Keyword</th>
+              <th scope="col">Explanations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Integeer</td>
+              <td><code>int</code></td>
+              <td>Stores integer (whole numbers), without decimals, such as 123 or -123</td>
+            </tr>
+            <tr>
+              <td>character</td>
+              <td><code>char</code></td>
+              <td>Stores single character, such as 'a' or 'B'. Char values are surrounded by single quotes.</td>
+            </tr>
+            <tr>
+              <td>floating-point</td>
+              <td><code>float</code></td>
+              <td>stores single-precision floating point numbers, with decimals, such as 19.99 or -19.99</td>
+            </tr>
+            <tr>
+              <td>Double floating-point</td>
+              <td><code>double</code></td>
+              <td>double-precision floating point value</td>
+            </tr>
+            <tr>
+              <td>Word or Text</td>
+              <td><code>string</code></td>
+              <td>Stores text, such as "Hello World". String value are surrounded by double quotes.</td>
+            </tr>
+            <tr>
+              <td>boolean</td>
+              <td><code>bool</code></td>
+              <td>Stores values with tow states: <strong>True or False</strong></td>
+            </tr>
+            <tr>
+              <td>Wide character</td>
+              <td><code>wchar_t</code></td>
+              <td>A wide character type.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The following table shows the variable type, how much memory it takes to store the value in memory, and what is maximum and minimum value which can be stored in such type of variables.
+        </p>
+        <table>
+          <caption>list of fundamental types in C++</caption>
+          <thead>
+            <tr>
+              <th scope="col">Type</th>
+              <th scope="col">Typeical Bit With</th>
+              <th scope="col">Typeical Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>char</td>
+              <td rowspan="3">1byte</td>
+              <td>-127 to 127 or 0 to 255</td>
+            </tr>
+            <tr>
+              <td>unsigned char</td>
+              <td>0 to 255</td>
+            </tr>
+            <tr>
+              <td>signed char</td>
+              <td>-127 to 127</td>
+            </tr>
+            <tr>
+              <td>int</td>
+              <td rowspan="3">4byte</td>
+              <td>-2147483648 to 2147483647</td>
+            </tr>
+            <tr>
+              <td>unsigned int</td>
+              <td>0 to 4294967295</td>
+            </tr>
+            <tr>
+              <td>signed int</td>
+              <td>-2147483648 to 2147483647</td>
+            </tr>
+            <tr>
+              <td>short int</td>
+              <td rowspan="3">2byte</td>
+              <td>-32768 to 32767</td>
+            </tr>
+            <tr>
+              <td>unsigned short int</td>
+              <td>0 to 65535</td>
+            </tr>
+            <tr>
+              <td>signed short int</td>
+              <td>-32768 to 32767</td>
+            </tr>
+            <tr>
+              <td>long int</td>
+              <td rowspan="4">8byte</td>
+              <td>-9223372036854775808 to 9223372036854775807</td>
+            </tr>
+            <tr>
+              <td>signed long int</td>
+              <td>same as long int</td>
+            </tr>
+            <tr>
+              <td>unsigned long int</td>
+              <td>0 to 18446744073709551615</td>
+            </tr>
+            <tr>
+              <td>double</td>
+            </tr>
+            <tr>
+              <td>float</td>
+              <td>4byte</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Following is the example, which will produce correct size of various data types on your computer.
+        </p>
+        <div class="code-cont">
+          <div class="main-code box-m">
+          <code class="code-line">
+            <span class="lnum"><span class="comment">// C++ Program to Demonstrate the correct size</span></span>
+            <span class="lnum"><span class="comment">// of various data types on your computer.</span></span>
+            <span class="lnum">#include <span class="italict">&lt;iostream&gt;</span></span>
+            <span class="lnum"><span class="mcode">using namespace</span> <span class="fcode">std</span>;</span>
+            <span class="lnum">&thinsp;</span>
+            <span class="lnum"><span class="varcode">int</span> <span class="fcode">main</span>()</span> 
+            <span class="lnum">{</span>
+           <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Size of char : "</span> &lt;&lt; <span class="mcode">sizeof</span>(<span class="varcode">char</span>) &lt;&lt; endl;</span>
+           <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Size of int : "</span> &lt;&lt; <span class="mcode">sizeof</span>(<span class="varcode">int</span>) &lt;&lt; endl;</span>
+           <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Size of short int : "</span> &lt;&lt; <span class="mcode">sizeof</span>(<span class="varcode">short int</span>) &lt;&lt; endl;</span>
+           <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Size of long int : "</span> &lt;&lt; <span class="mcode">sizeof</span>(<span class="varcode">long int</span>) &lt;&lt; endl;</span>
+           <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Size of float : "</span> &lt;&lt; <span class="mcode">sizeof</span>(<span class="varcode">float</span>) &lt;&lt; endl;</span>
+           <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Size of double : "</span> &lt;&lt; <span class="mcode">sizeof</span>(<span class="varcode">double</span>) &lt;&lt; endl;</span>
+           <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Size of wchar_t : "</span> &lt;&lt; <span class="mcode">sizeof</span>(<span class="varcode">wchar_t</span>) &lt;&lt; endl;</span>
+           <span class="lnum">&#9;<span class="mcode">return</span> 0;</span>
+            <span class="lnum">}</span>
+          </code>
+        </div>
+          <div class="output box-m">
+            <samp>
+              <span>Size of char : 1</span>
+              <span>Size of int : 4</span>
+              <span>Size of short int : 2</span>
+              <span>Size of long int : 4</span>
+              <span>Size of float : 4</span>
+              <span>Size of double : 8</span>
+              <span>Size of wchar_t : 4</span>
+            </samp>
+          </div>
+        </div>
+        <p>
+          This example uses <code>endl</code>, which inserts a new-line character after every line and &lt;&lt; operator is being used to pass multiple values out to the screen. We are also using <code>sizeof()</code> operator to get size of various <span class="bold">data types</span>.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Declaring_Variables">
+      <header>Declaring Variables</header>
+      <article>
+        <p>In C++, data types are declarations for variables. This determines the type and size of data associated with variables.
+        </p>
+        <p>C++ is a strongly-typed language, and requires every variable to be declared with its type before its first use. This informs the compiler the size to reserve in memory for the variable and how to interpret its value. The syntax to declare a new variable in C++ is straightforward: we simply write the type followed by the variable name (i.e., its identifier). For Example:
+        </p>
+        <div class="ex-div box-m">
+          <code class="code-line">
+            <span><span class="varcode">int</span> <var>a</var>;</span>
+            <span><span class="varcode">float</span> <var>mynumber</var>;</span>
+          </code>
+        </div>
+        <p>These are two valid declarations of variables. The first one declares a variable of type <code>int</code> with the identifier <var>a</var>. The second one declares a variable of type <code>float</code> with the identifier <var>mynumber</var>. Once declared, the variables a and <var>mynumber</var> can be used within the rest of their scope in the program.
+        </p>
+        <p>If declaring more than one variable of the same type, they can all be declared in a single statement by separating their identifiers with commas. For example:
+        </p>
+        <div class="ex-div box-m">
+          <code class="code-line">
+            <span><span class="comment">//variable of the same type:</span></span>
+            <span><span class="varcode">int</span> <var>a, b, c</var>;</span>
+            <span><br></span>
+            <span><span class="comment">//exactly the same meaning as:</span></span>
+            <span><span class="varcode">int</span> <var>a</var>;</span>
+            <span><span class="varcode">int</span> <var>b</var>;</span>
+            <span><span class="varcode">int</span> <var>c</var>;</span>
+          </code>
+        </div>
+        <p>To see what variable declarations look like in action within a program, let's have an Example: 
+        </p>
+        <div class="code-cont">
+          <div class="main-code box-m">
+        <code class="code-line">
+          <span class="lnum"><span class="comment">// operating with variable</span></span>
+          <span class="lnum">#include<span class="italict"> &lt;iostream&gt;</span></span>
+          <span class="lnum"><span class="mcode">using namespace</span> std;</span>
+          <span class="lnum">&thinsp;</span>
+          <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+          <span class="lnum">{</span>
+          <span class="lnum">&#9;<span class="comment">// declaring variable:</span></span>
+          <span class="lnum">&#9;<span class="varcode">int</span> <var>a</var>, <var>b</var>;</span>
+          <span class="lnum">&#9;<span class="varcode">int</span><var> result</var>;</span>
+          <span class="lnum">&thinsp;</span>
+          <span class="lnum">&#9;<span class="comment">// process:</span></span>
+          <span class="lnum">&#9;<var>a</var> = 5;</span>
+          <span class="lnum">&#9;<var>b</var> = 2;</span>
+          <span class="lnum">&#9;<var>a</var> = <var>a</var> + 1;</span>
+          <span class="lnum">&#9;<var>result</var> = <var>a</var> - <var>b</var>;</span>
+          <span class="lnum">&thinsp;</span>
+          <span class="lnum">&#9;<span class="comment">// print out the result:</span></span>
+          <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"The result of a - b = "</span> &lt;&lt; <var>result</var>;</span>
+          <span class="lnum">&thinsp;</span>
+          <span class="lnum">&#9;<span class="comment">// trerminate the program:</span></span>
+          <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+        <span class="lnum">}</span>
+      </code>
+    </div>
+          <div class="output box-m">
+            <samp><span>The result of a - b = 4</span></samp>
+          </div>
+        </div>
+        <article class="sub-article" id="variable_naming">
+          <h3>Variable Naming</h3>
+          <p>The name of variable can be comppsed pf letters, digits, and the underscore character. it must begin with either a lettre or underscore. Upper and lowercase letters are distinct because C++ is case-sensitive.
+          </p>
+          <p class="note"><span class="bold">Very important:</span> The C++ language is a "case sensitive" language. That means that an identifier written in capital letters is not equivalent to another one with the same name but written in small letters. Thus, for example, the <code>RESULT</code> variable is not the same as the <code>result</code> variable or the <code>Result</code> variable. These are three different identifiers identifiying three different variables.
+          </p>
+          <P class="bold">Some other rules for variable naming conventions in C++:</P>
+          <ul>
+            <li>Keyword cannot be used as variable names.</li>
+            <li>The variable name cannot contain spaces.</li>
+            <li>Hyphen (-) cannot be used within the variable names.</li>
+            <li>Variable names must not start with special characters and numbers, it should be either an uppercase or lowercase character or underscore ( _ ).</li>
+          </ul>
+          <p class="bold">Some of the valid variable names are:</p>
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span><span class="varcode">int </span><var>age</var>;</span>
+              <span><span class="varcode">int </span><var>_age</var>;</span>
+              <span><span class="varcode">int </span><var>student_age</var>;</span>
+              <span><span class="varcode">int </span><var>studentAge</var>;</span>
+            </code>
+          </div>
+          <P class="bold">Some of the invalid variable names are:</P>
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span><span class="varcode">int </span><var>2ndvariable</var>;</span>
+              <span><span class="varcode">int </span><var>student-age</var>;</span>
+              <span><span class="varcode">int </span><span class="varcode">float</span>;</span>
+              <span><span class="varcode">int </span><var>student age</var>;</span>
+              <span><span class="varcode">int </span><var>#age</var>;</span>
+            </code>
+          </div>
+        </article>
+        <article class="sub-article" id="initializ_vaiable">
+          <h3>Initialization of variables</h3>
+          <P>When the variables in the example above are declared, they have an undetermined value until they are assigned a value for the first time. But it is possible for a variable to have a specific value from the moment it is declared. This is called the <span class="bold italict">initialization</span> of the variable.
+          </P>
+          <p>In C++, there are three ways to initialize variables. They are all equivalent and are reminiscent of the evolution of the language over the years:
+          </p>
+          <ul>
+            <li><span class="bold italict">c-like initialization</span> consists of appending an equal sign followed by the value to which the variable is initialized: <code>type identifier = initial_value;</code></li>
+            <li><span class="bold italict">constructor initialization </span>encloses the initial value between parentheses (()): <code>type identifier (initial_value);</code></li>
+            <li><span class="bold italict">uniform initialization </span>similar to the above, but using curly braces ({ }) instead of parentheses: <code>type identifier {initial_value};</code></li>
+          </ul>
+          <p>All three ways of initializing variables are valid and equivalent in C++. Example</p>
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="comment">// initialization of variables</span></span>
+                <span class="lnum">#include <span class="italict">&lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace</span> std;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+                <span class="lnum">{</span>
+                  <span class="lnum">&#9;<span class="varcode">int </span><var>a </var> = 5;<span class="comment">&#9;// c-like initialization</span></span>
+                  <span class="lnum">&#9;<span class="varcode">int </span><var>b</var>(3);<span class="comment">&#9;// constructor initialization</span></span>
+                  <span class="lnum">&#9;<span class="varcode">int </span><var>c</var>{2};<span class="comment">&#9;// uniform initialization</span></span>
+                  <span class="lnum">&#9;<span class="varcode">int </span><var>result</var>;<span class="comment">&#9;// initial value undetermined</span></span>
+                  <span class="lnum">&#9;</span>
+                  <span class="lnum">&#9;<var>a</var> = <var>a</var> + <var>b</var>;</span>
+                  <span class="lnum">&#9;<var>result</var> = <var>a</var> - <var>c</var>;</span>
+                  <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"a - c = "</span> &lt;&lt; <var>result</var>;</span>
+                  <span class="lnum">&#9;</span>
+                  <span class="lnum">&#9;<span class="mcode">return</span> 0;</span>
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+              <samp><span>a - c = 6</span></samp>
+            </div>
+          </div>
+        </article>
+      </article>
+    </section>
+    <section class="main-section" id="Introduction_To_Strings">
+      <header>Introduction to strings</header>
+      <article>
+        <p>Fundamental type represent the most basic type handled by the machines where the code may run. But one of the major strengths of the C++ language is its rich set of compound types, of which the fundamental types are mere blocks.
+        </p>
+        <p>An example of compound type is the <code>string</code> class. Variables of this type are able to store sequences of characters, such as word or sentences.
+        </p>
+        <p>A first difference with fundamental data type is that in order to declare and use objects (Variables) of this type, the program needs to include the header where the type is defined within the standard library (<code>#include &lt;string&gt;</code>):
+        </p>
+        <div class="code-cont">
+          <div class="main-code box-m">
+          <code class="code-line">
+            <span class="lnum"><span class="comment">// my first string</span></span>
+            <span class="lnum">#include <span class="italict">&lt;iostream&gt;</span></span>
+            <span class="lnum">#include <span class="italict">&lt;string&gt;</span></span>
+            <span class="lnum"><span class="mcode">using namespace </span>std;</span>
+            <span class="lnum">&thinsp;</span>
+            <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+            <span class="lnum">{</span>
+              <span class="lnum">&#9;<span class="varcode">string </span><var>mystring</var>;</span>
+              <span class="lnum">&#9;<var>mystring</var> = <span class="scode">"This is a string"</span>;</span>
+              <span class="lnum">&#9;cout &lt;&lt; <var>mystring</var>;</span>
+              <span class="lnum">&#9;</span>
+              <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+            <span class="lnum">}</span>
+          </code>
+        </div>
+          <div class="output box-m">
+            <samp><span>This is a string</span></samp>
+          </div>
+        </div>
+        <p>String can also perform all the other basic operations that fundamental data type can, like being declared without an initial value and change its value during execution:
+        </p>
+        <div class="code-cont">
+          <div class="main-code box-m">
+            <code class="code-line">
+              <span class="lnum"><span class="comment">// my first string 2</span></span>
+              <span class="lnum">#include <span class="italict">&lt;iostream&gt;</span></span>
+              <span class="lnum">#include <span class="italict">&lt;string&gt;</span></span>
+              <span class="lnum"><span class="mcode">using namespace </span>std;</span>
+              <span class="lnum">&thinsp;</span>
+              <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+              <span class="lnum">{</span>
+              <span class="lnum">&#9;<span class="varcode">string </span><var>mystring</var>;</span>
+              <span class="lnum">&#9;<var>mystring</var> = <span class="scode">"This is the initial string content"</span>;</span>
+              <span class="lnum">&#9;cout &lt;&lt; <var>mystring</var> &lt;&lt; endl;</span>
+              <span class="lnum">&thinsp;</span>
+              <span class="lnum">&#9;<var>mystring</var> = <span class="scode">"This is a different string content"</span>;</span>
+              <span class="lnum">&#9;cout &lt;&lt; <var>mystring</var> &lt;&lt; endl;</span>
+              <span class="lnum">&thinsp;</span>
+              <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+              <span class="lnum">}</span>
+            </code>
+          </div>
+          <div class="output box-m">
+            <samp>
+            <span>This is the initial string content</span>
+            <span>This is the different string content</span>
+            </samp>
+          </div>
+        </div>
+
+        <p class="note">inserting the <code>endl</code> manipulator <strong>end</strong>s the line (printing a new line character and flushing the stream).</p>
+        <P>The <code>string</code> class is a <span class="bold italict">compound type.</span> As you can see in the example above, <span class="bold italict">compound types</span> are used in the same way as <span class="bold italict">fundamental types:</span>the same syntax is used to declare Variables and to initialize them.
+        </P>
+      </article>
+    </section>
+    <section class="main-section" id="Constant_Variables">
+      <header>Constant Variables</header>
+      <article>
+        <P>The constants in C++ are the read-only variables whose values cannot be modified once they are declared in the C program. The type of constant can be an integer constant, a floating pointer constant, a string constant, or a character constant. In C++ language, the <code>const</code> keyword is used to define the constants.
+        </P>
+        <p>A const variable must be initialized during declaration and cannot be changed later, <code>const</code> variables by initializing them in the following way:</p>
+        <div class="code-cont">
+          <div class="main-code box-m">
+            <code class="code-line">
+              <span class="lnum">#include<span class="italict"> &lt;iostream&gt;</span></span>
+              <span class="lnum"><span class="mcode">using namespace</span> std;</span>
+              <span class="lnum">&thinsp;</span>
+              <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+              <span class="lnum">{</span>
+                <span class="lnum">&#9;<span class="comment">// initialize a const PI</span></span>
+                <span class="lnum">&#9;<span class="mcode">const </span><span class="varcode">double </span><var>PI</var> = 3.14;</span>
+                <span class="lnum">&#9;<span class="varcode">int </span><var>radius</var> = 4;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// use the const in a calculation</span></span>
+                <span class="lnum">&#9;<span class="varcode">double </span><var>area</var> = <var>PI</var> * <var>radius</var> * <var>radius</var>;</span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Area of circle with radius " </span>&lt;&lt; <var>radius</var> &lt;&lt; <span class="scode">"is : "</span> &lt;&lt; <var>area</var>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+              <span class="lnum">}</span>
+            </code>
+          </div>
+          <div class="output box-m">
+            <samp><span>Area of circle with radius 4 is : 50.24</span></samp>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="main-section" id="Basic_Input_Output">
+      <header>Basic Input/Output</header>
+      <article>
+        <p>C++ I/O occurs in streams, which are sequences of bytes. If bytes flow from a device like a keyboard, a disk drive, or a network connection etc. to main memory, this is called <span class="bold">input operation</span> and if bytes flow from main memory to a device like a display screen, a printer, a disk drive, or a network connection, etc., this is called <span class="bold">output operation</span>.</p>
+        <h3>Standard Output Stream (<code>cout</code>) :</h3>
+        The predefined object <code>cout</code> is an instance of <code>iostream</code> class. The cout object is said to be "connected to" the standard output device, which usually is the display screen. The cout is used in conjunction with the stream insertion operator, which is written as <code>&lt;&lt;</code> which are two less than signs as shown in the following example.
+        <div class="code-cont">
+          <div class="main-code box-m">
+            <code class="code-line">
+              <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+              <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;string&gt;</span></span>
+              <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+              <span class="lnum">&thinsp;</span>
+              <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+              <span class="lnum">{</span><span class="lnum">&#9;<span class="varcode">string</span> <var>str</var> = <span class="scode">"Hello C++"</span>;</span>
+              <span class="lnum">&#9;cout &lt;&lt; <var>str</var> &lt;&lt; endl;</span>
+              <span class="lnum">}</span>
+            </code>
+          </div>
+          <div class="output box-m">
+            <samp>Hello C++</samp>
+          </div>
+        </div>
+        The C++ compiler also determines the data type of variable to be output and selects the appropriate stream insertion operator to display the value. The <code>&lt;&lt;</code> operator is overloaded to output data items of built-in types integer, float, double, strings and pointer values.
+        <p>The insertion operator <code>&lt;&lt;</code> may be used more than once in a single statement as shown above and endl is used to add a new-line at the end of the line.</p>
+        <h3>Standard Input Stream (<code>cin</code>)</h3>
+        The predefined object cin is an instance of <code>iostream</code> class. The cin object is said to be attached to the standard input device, which usually is the keyboard. The <code>cin</code> is used in conjunction with the stream extraction operator, which is written as <code>&gt;&gt;</code> which are two greater than signs as shown in the following example:
+        <div class="code-cont">
+          <div class="main-code box-m">
+            <code class="code-line">
+              <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+              <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+              <span class="lnum">&thinsp;</span>
+              <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+              <span class="lnum">{</span>
+              <span class="lnum">&#9;<span class="varcode">char</span> <var>name</var>[50];</span>
+              <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Please enter your name: "</span>;</span>
+              <span class="lnum">&#9;cin &gt;&gt; <var>name</var>;</span>
+              <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Your name is: "</span> &lt;&lt; <var>name</var> &lt;&lt; endl;</span>
+              <span class="lnum">}</span>
+            </code>
+          </div>
+          <div class="output box-m">
+            <samp>
+              <span>Please enter your name: <kbd>C++</kbd></span>
+              <span>Your name is: C++</span>
+            </samp>
+          </div>
+        </div>
+        The C++ compiler also determines the data type of the entered value and selects the appropriate stream extraction operator to extract the value and store it in the given variables.
+        <p>The stream extraction operator &gt;&gt; may be used more than once in a single statement. To request more than one datum you can use the following </p>
+        <div class="ex-div box-m">
+          <code class="code-line">
+            cin &gt;&gt; <var>name</var> &gt;&gt; <var>age</var>;
+          </code>
+        </div>
+        This will be equivalent to the following two statements :
+        <div class="ex-div box-m">
+          <code class="code-line">
+            <span>cin &gt;&gt; <var>name</var>;</span>
+            <span>cin &gt;&gt; <var>age</var>;</span>
+          </code>
+        </div>
+      </article>
+    </section>
+    <section class="main-section" id="Operators">
+      <header>Operators</header>
+      <article>
+        An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. C++ is rich in built-in operators and provide the following types of operators. For example:
+        <div class="ex-div box-m">
+          <code class="code-line">
+            <span><span class="varcode">int</span> <var>c</var> = <var>a</var> + <var>b</var>;</span>
+          </code>
+        </div>
+        Here, ‘+’ is the addition operator. ‘a’ and ‘b’ are the operands that are being ‘added’.
+        <p>Operators in C++ can be classified into :</p>
+        <ul>
+          <li><a href="#arithmetic">Arithmetic Operators</a></li>
+          <li><a href="#assignment">Assignment Operators</a></li>
+          <li><a href="#ralational">Ralational Operators</a></li>
+          <li><a href="#logical">Logical Operators</a></li>
+        </ul>
+        <article id="arithmetic" class="sub-article">
+          <h3>Arithmetic Operators</h3>
+          Arithmetic operators are used to perform arithmetic operations on variables and data. For example:
+          <div class="ex-div box-m">
+            <code class="code-line"><span><var>a</var> + <var>b</var>;</span></code>
+          </div>
+          Here, the + operator is used to add two variables <var>a</var> and <var>b</var>. Similarly there are various other arithmetic operators in C++.
+          <table class="td-center">
+            <caption>supported arithmetical operations</caption>
+            <thead>
+              <tr>
+                <th scope="col">operator</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>&plus;</td>
+                <td>addition</td>
+              </tr>
+              <tr>
+                <td>&minus;</td>
+                <td>Subtraction</td>
+              </tr>
+              <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+              </tr>
+              <tr>
+                <td>/</td>
+                <td>Division</td>
+              </tr>
+              <tr>
+                <td>%</td>
+                <td>Modulo Operation (Remainder after division)</td>
+              </tr>
+              <tr>
+                <td>&plus;&plus;</td>
+                <td>A++ Increases A value by 1</td>
+              </tr>
+              <tr>
+                <td>&minus;&minus;</td>
+                <td>A&minus;&minus; Decreases A value by 1</td>
+              </tr>
+            </tbody>
+          </table>
+          Operations of addition, subtraction, multiplication and division correspond literally to their respective mathematical operators. The last one, modulo operator, represented by a percentage sign (%), gives the remainder of a division of two values. For example:
+          <div class="ex-div box-m">
+            <code class="code-line"><span><var>x</var> = 11 % 3;</span></code>
+          </div>
+          <p>results in variable x containing the value 2, since dividing 11 by 3 results in 3, with a remainder of 2.</p>
+
+          <p class="note">The Modulo operator (%) operator should only be used with integers.</p>
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+              <span class="lnum"><span class="comment">// Program to demonstrate arithmetic operator</span></span>
+              <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+              <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+              <span class="lnum">&thinsp;</span>
+              <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+              <span class="lnum">{</span>
+              
+                <span class="lnum">&#9;<span class="varcode">int </span><var>a</var> = 8, <var>b</var> = 2;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Addition Operator</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"a + b = "</span> &lt;&lt; (<var>a</var> + <var>b</var>) &lt;&lt; endl;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Subtraction operator</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"a - b = "</span> &lt;&lt; (<var>a</var> - <var>b</var>) &lt;&lt; endl;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Multiplication operator</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"a * b = "</span> &lt;&lt; (<var>a</var> * <var>b</var>) &lt;&lt; endl;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Division operator</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"a / b = "</span> &lt;&lt; (<var>a</var> / <var>b</var>) &lt;&lt; endl;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Modulo operator</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"a % b = "</span> &lt;&lt; (<var>a</var> % <var>b</var>) &lt;&lt; endl;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+              
+              <span class="lnum">}</span>
+            </code>
+            </div>
+            <div class="output box-m">
+              <samp>
+                <span>a + b = 10</span>
+                <span>a - b = 6</span>
+                <span>a * b = 16</span>
+                <span>a / b = 4</span>
+                <span>a % b = 0</span>
+              </samp>
+            </div>
+          </div>
+          <h3>Increment and decrement:</h3>
+          Some expression can be shortened even more: the increase operator (++) and the decrease operator (&minus;&minus;) increase or reduce by one the value stored in a variable. They are equivalent to +=1 and to -=1, respectively. Thus:
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span>++<var>x</var>;</span>
+              <span><var>x</var>+=1;</span>
+              <span><var>x</var> = <var>x</var> + 1;</span>
+            </code>
+          </div>
+          are all equivalent in its functionality; the three of them increase by one the value of x.
+          <p>
+            A peculiarity of this operator is that it can be used both as a prefix and as a suffix. That means that it can be written either before the variable name (++x) or after it (x++). Although in simple expressions like x++ or ++x, both have exactly the same meaning; in other expressions in which the result of the increment or decrement operation is evaluated, they may have an important difference in their meaning: In the case that the increase operator is used as a prefix (++x) of the value, the expression evaluates to the final value of x, once it is already increased. On the other hand, in case that it is used as a suffix (x++), the value is also increased, but the expression evaluates to the value that x had before being increased. Notice the difference:
+          </p>
+          <table>
+            <caption>increment and decrement example</caption>
+            <thead>
+              <tr>
+                <th scope="col">Example 1</th>
+                <th scope="col">Example 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code style="display: block;"><var>x</var> = 3;<br>
+                  <var>y</var> = ++<var>x</var>;</code><br>
+                  // x contains 4, y contains 4
+                </td>
+                <td>
+                  <code style="display: block;">
+                    <var>x</var> = 3;<br>
+                    <var>y</var> = <var>x</var>++;</code><br>
+                    // x contains 4, y contains 3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          In <strong>Example 1</strong>, the value assigned to y is the value of x after being increased. While in <strong>Example 2</strong>, it is the value x had before being increased.
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="comment">// Program to demonstrate arithmetic operator</span></span>
+                <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+                <span class="lnum">{</span>
+                
+                  <span class="lnum">&#9;<span class="varcode">int </span><var>a</var> = 21, <var>c</var>;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;<span class="comment">// Value of a will not be increased before assignment.</span></span>
+                  <span class="lnum">&#9;<var>c</var> = <var>a</var>++;</span>
+                  <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Line 1 - Value of a++ is: "</span> &lt;&lt; <var>c</var> &lt;&lt; endl;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;<span class="comment">// After expression value of a is increased</span></span>
+                  <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Line 2 - Value of a is: "</span> &lt;&lt; <var>a</var> &lt;&lt; endl;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;<span class="comment">// Value of a will be increased before assignment.</span></span>
+                  <span class="lnum">&#9;<var>c</var> = ++<var>a</var>;</span>
+                  <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Line 3 - Value of ++a is: "</span> &lt;&lt; <var>c</var> &lt;&lt; endl;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;<span class="mcode">return</span> 0;</span>
+              
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+              <samp>
+                <span>Line 1 - Value of a++ is: 21</span>
+                <span>Line 2 - Value of a is: 22</span>
+                <span>Line 3 - Value of ++a is: 23</span>
+              </samp>
+            </div>
+          </div>
+        </article>
+        <article id="assignment" class="sub-article">
+          <h3>Assignment Operators (=)</h3>
+          In C++, assignment operators are used to assign values to variables. For example,
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span class="comment">// assign 5 to a</span>
+              <span><var>a</var> = 5;</span>
+            </code>
+          </div>
+          Here, we have assigned a value of 5 to the variable <var>a</var>.
+          The assignment operation always takes place from right to left, and never the other way around:
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span><var>x</var> = <var>y</var>;</span>
+            </code>
+          </div>
+          this statement assigns to variable x the value contained in variable y. The value of x at the moment this statement is executed is lost and replaced by the value of y.
+          <p>Consider also that we are only assigning the value of y to x at the moment of the assignment operation. Therefore, if y changes at a later moment, it will not affect the new value taken by x.
+          </p>
+          Assignment operations are expressions that can be evaluated. That means that the assignment itself has a value, and -for fundamental types- this value is the one assigned in the operation. For example:
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span><var>y</var> = 2 + (<var>x</var> = 5);</span>
+            </code>
+          </div>
+          <h4>Compound assignment:</h4>
+          Compound assignment operators modify the current value of a variable by performing an operation on it. They are equivalent to assigning the result of an operation to the first operand:
+          <table class="center">
+            <caption>Compound assignment example.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Operator</th>
+                <th scope="col">Example</th>
+                <th scope="col">Equivalent to</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>&plus;&equals;</td>
+                <td>a += b;</td>
+                <td>a = a + b;</td>
+              </tr>
+              <tr>
+                <td>&minus;=</td>
+                <td>a &minus;= b;</td>
+                <td>a = a &minus; b;</td>
+              </tr>
+              <tr>
+                <td>*=</td>
+                <td>a *= b;</td>
+                <td>a = a * b;</td>
+              </tr>
+              <tr>
+                <td>/=</td>
+                <td>a /= b;</td>
+                <td>a = a / b;</td>
+              </tr>
+              <tr>
+                <td>%=</td>
+                <td>a %= b;</td>
+                <td>a = a % b;</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Example Compound Assignment Operators</p>
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="comment">// Program to demonstrate assignment operator</span></span>
+                <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+                <span class="lnum">{</span>
+                
+                  <span class="lnum">&#9;<span class="varcode">int </span><var>a</var>&comma;<var> b</var>&semi;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;<span class="comment">// 2 is assigned to a</span></span>
+                  <span class="lnum">&#9;<var>a</var> = 2&semi;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;<span class="comment">// 7 is assigned to b</span></span>
+                  <span class="lnum">&#9;<var>b</var> = 7&semi;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"a = "</span> &lt;&lt; <var>a </var>&lt;&lt; endl;</span>
+                  <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"b = "</span> &lt;&lt; <var>b </var>&lt;&lt; endl;</span>
+                  <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"\nAfter a += b;"</span> &lt;&lt; endl;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;<span class="comment">// assigning the sum of a and b to a</span></span>
+                  <span class="lnum">&#9;<var>a</var> += <var>b</var>;<span class="comment dtab">&#9;// a = a + b</span></span>
+                  <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"a = </span> &lt;&lt; <var>a</var> &lt;&lt; endl;</span>
+                  <span class="lnum">&thinsp;</span>
+                  <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+                
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+              <samp>
+                <span>a = 2</span>
+                <span>b = 7</span>
+                <span>&thinsp;</span>
+                <span>After a += b;</span>
+                <span>a = 9</span>
+              </samp>
+            </div>
+          </div>
+        </article>
+        <article id="ralational" class="sub-article">
+          <h3>Ralational Operators</h3>
+          Two expressions can be compared using relational and equality operators. For example, to know if two values are equal or if one is greater than the other.
+
+          <p class="note">
+            The result of such an operation is either 1 is true or 0 is false in <strong>Boolean value.</strong>
+          </p>
+          The relational operators in C++ are:
+          <table class="td-center">
+            <thead>
+              <tr>
+                <th scop="col">Operator</th>
+                <th scop="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>&equals;&equals;</td>
+                <td>Equal to</td>
+              </tr>
+              <tr>
+                <td>!&equals;</td>
+                <td>Not equal to</td>
+              </tr>
+              <tr>
+                <td>&lt;</td>
+                <td>Less then</td>
+              </tr>
+              <tr>
+                <td>&gt;</td>
+                <td>Greater then</td>
+              </tr>
+              <tr>
+                <td>&lt;=</td>
+                <td>Less than or equal to</td>
+              </tr>
+              <tr>
+                <td>&gt;=</td>
+                <td>Greater than or equal to</td>
+              </tr>
+            </tbody>
+          </table>
+          Here there are some examples:
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span>(7 == 5) <span class="comment tabs">// evaluates to false</span></span>
+              <span>(5 &gt; 4) <span class="comment tabs">// evaluates to true</span></span>
+              <span>(3 !&equals; 2) <span class="comment tabs">// evaluates to true</span></span>
+              <span>(6 &gt;= 6) <span class="comment tabs">// evaluates to true</span></span>
+              <span>(5 &lt; 5) <span class="comment tabs">// evaluates to false</span></span>
+            </code>
+          </div>
+          Of course, it's not just numeric constants that can be compared, but just any value, including, of course, variables. Suppose that a=2, b=3 and c=6, then:
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span>(<var>a</var> &equals;= 5) <span class="comment tabs">// evaluates to false, since a is not equal to 5</span></span>
+              <span>(<var>a</var> * <var>b</var> &gt;= <var>c</var>) <span class="comment tabs">// evaluates to true, since (2*3 &gt;= 6) is true</span></span>
+              <span>(<var>b</var> + 4 &gt; <var>a</var> * <var>c</var>) <span class="comment tabs">// evaluates to false, since (3+4 &gt; 2*6) is false</span></span>
+              <span>((<var>b</var> = 2) &equals;= <var>a</var>) <span class="comment tabs">// evaluates to true</span></span>
+            </code>
+          </div>
+          in the last expression ((b=2) == a), we first assigned the value 2 to b and then we compared it to a (that also stores the value 2), yielding true.
+
+          <p class="note">The assignment operator (operator =, with one equal sign) is not the same as the equality comparison operator (operator &equals;=, with two equal signs); the first one (=) assigns the value on the right-hand to the variable on its left, while the other (&equals;=) compares whether the values on both sides of the operator are equal.</p>
+        </article>
+        <article id="logical" class="sub-article">
+          <h3>Logical Operators</h3>
+          Logical operators are used to check whether an expression is true or false. If the expression is true, it returns 1 whereas if the expression is false, it returns 0.
+          <table class="center">
+            <caption>C++ Logical Operators</caption>
+            <thead>
+              <tr>
+                <th scope="col">Operator</th>
+                <th scope="col">Example</th>
+                <th scope="col">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>&&</code></td>
+                <td><code>expression1 <strong>&&</strong> expression2</code></td>
+                <td>Logical AND.<br>
+                True only if all the operands are true.</td>
+              </tr>
+              <tr>
+                <td><code>||</code></td>
+                <td><code>expression1 <strong>||</strong> expression2</code></td>
+                <td>Logical OR.<br>
+                True if at least one of the operands is true.</td>
+              </tr>
+              <tr>
+                <td><code>!</code></td>
+                <td><code><strong>!</strong>expression</code></td>
+                <td>Logical NOT.<br>
+                True only if the operand is false</td>
+              </tr>
+            </tbody>
+          </table>
+          The operator <code>!</code> is the C++ operator for the Boolean operation <strong>NOT</strong>. It has only one operand, to its right, and inverts it, producing false if its operand is true, and true if its operand is false. Basically, it returns the opposite Boolean value of evaluating its operand. For example:
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span>!(5 == 5)<span class="comment">// evaluates to false because the expression at its right (5 == 5) is true</span></span>
+              <span>!(6 &lt;= 4)<span class="comment">// evaluates to true because (6 &lt;= 4) would be false</span></span>
+              <span>!true<span class="comment">// evaluates to false</span></span>
+              <span>!false<span class="comment"> // evaluates to true </span></span>
+            </code>
+          </div>
+          The logical operators <code>&&</code> and <code>||</code> are used when evaluating two expressions to obtain a single relational result. The operator && corresponds to the <span class="bold italict">Boolean logical operation</span> <strong>AND</strong>, which yields <strong>true</strong> if both its operands are <strong>true</strong>, and <strong>false</strong> otherwise. The following panel shows the result of operator && evaluating the expression <code>a && b</code>:
+          <table class="center">
+            <caption>AND operator</caption>
+            <thead>
+              <tr>
+                <th scope="col" colspan="3"><code>&&</code> OPERATOR (and)</th>
+              </tr>
+              <tr>
+                <th scope="col">a</th>
+                <th scope="col">b</th>
+                <th scope="col">a && b</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>True</td>
+                <td>True</td>
+                <td>True</td>
+              </tr>
+              <tr>
+                <td>True</td>
+                <td>False</td>
+                <td>False</td>
+              </tr>
+              <tr>
+                <td>False</td>
+                <td>True</td>
+                <td>False</td>
+              </tr>
+              <tr>
+                <td>False</td>
+                <td>False</td>
+                <td>False</td>
+              </tr>
+            </tbody>
+          </table>
+          The operator <code>||</code> corresponds to the Boolean logical operation OR, which yields true if either of its operands is <strong>true</strong>, thus being false only when both operands are <strong>false</strong>. Here are the possible results of <code>a || b</code>:
+          <table class="center">
+            <caption>OR operator</caption>
+            <thead>
+              <tr>
+                <th scope="col" colspan="3"><code>||</code> OPERATOR (or)</th>
+              </tr>
+              <tr>
+                <th scope="col">a</th>
+                <th scope="col">b</th>
+                <th scope="col">a || b</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>True</td>
+                <td>True</td>
+                <td>True</td>
+              </tr>
+              <tr>
+                <td>True</td>
+                <td>False</td>
+                <td>True</td>
+              </tr>
+              <tr>
+                <td>False</td>
+                <td>True</td>
+                <td>True</td>
+              </tr>
+              <tr>
+                <td>False</td>
+                <td>False</td>
+                <td>False</td>
+              </tr>
+            </tbody>
+          </table>
+          In C++, logical operators are commonly used in decision making. To further understand the logical operators, let's see the following examples:
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="comment">// Program to demonstrate logical operator</span></span>
+                <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+                <span class="lnum">{</span>
+                <span class="lnum">&#9;<span class="varcode">bool</span> <var>result</var>;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<var>result</var> = (3 !&equals; 5) && (3 &lt; 5);<span class="comment">&#9;// true</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"(3 !&equals; 5) && (3 &lt; 5) is "</span> &lt;&lt; <var>result</var> &lt;&lt; endl;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<var>result</var> = (3 =&equals; 5) && (3 &lt; 5);<span class="comment">&#9;// false</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"(3 =&equals; 5) && (3 &lt; 5) is "</span> &lt;&lt; <var>result</var> &lt;&lt; endl;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<var>result</var> = (3 =&equals; 5) && (3 &gt; 5);<span class="comment">&#9;// false</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"(3 =&equals; 5) && (3 &gt; 5) is "</span> &lt;&lt; <var>result</var> &lt;&lt; endl;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<var>result</var> = (3 !&equals; 5) || (3 &lt; 5);<span class="comment">&#9;// true</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"(3 !&equals; 5) || (3 &lt; 5) is "</span> &lt;&lt; <var>result</var> &lt;&lt; endl;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<var>result</var> = (3 !&equals; 5) || (3 &gt; 5);<span class="comment">&#9;// true</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"(3 !&equals; 5) || (3 &gt; 5) is "</span> &lt;&lt; <var>result</var> &lt;&lt; endl;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<var>result</var> = (3 =&equals; 5) || (3 &gt; 5);<span class="comment">&#9;// false</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"(3 =&equals; 5) || (3 &gt; 5) is "</span> &lt;&lt; <var>result</var> &lt;&lt; endl;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<var>result</var> = !(5 == 2);<span class="comment dtab">&#9;// true</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"!(5 == 2) is "</span> &lt;&lt; <var>result</var> &lt;&lt; endl;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<var>result</var> = !(5 == 5);<span class="comment dtab">&#9;// true</span></span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"!(5 == 5) is "</span> &lt;&lt; <var>result</var> &lt;&lt; endl;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+              <samp>
+                <span>(3 !&equals; 5) && (3 &lt; 5) is 1</span>
+                <span>(3 == 5) && (3 &lt; 5) is 0</span>
+                <span>(3 == 5) && (3 &gt; 5) is 0</span>
+                <span>(3 !&equals; 5) || (3 &lt; 5) is 1</span>
+                <span>(3 !&equals; 5) || (3 &gt; 5) is 1</span>
+                <span>(3 == 5) || (3 &gt; 5) is 0</span>
+                <span>!(5 == 2) is 1</span>
+                <span>!(5 == 5) is 0</span>
+              </samp>
+            </div>
+          </div>
+        </article>
+      </article>
+    </section>
+    <section class="main-section" id="Statements_and_flow_control">
+      <header>Statements and flow control</header>
+      <article>
+        A simple C++ statement is each of the individual instructions of a program, like the variable declarations and expressions seen in previous sections. They always end with a semicolon (;), and are executed in the same order in which they appear in a program.
+        <p>But programs are not limited to a linear sequence of statements. During its process, a program may repeat segments of code, or take decisions and bifurcate. For that purpose, C++ provides flow control statements that serve to specify whar has to be done by our program, when, and under which circumstances.</p>
+        Statement may either be a simple C++ statement, such as: 
+        <ul>
+          <li>Single instruction, terminated with a semicolon (<code>;</code>)</li>
+          <li><strong>Compound Statement</strong> is a group of statement (<em>each of them terminated by its own semicolon</em>), but all grouped togther in a block, enclosed in curly  braces <code>{ }</code></li>
+        </ul>
+        <div class="ex-div box-m">
+          <code class="code-line">
+            <span>{<span class="comment dtab">&#9;// Start of compound statement</span></span>
+            <span>&#9;Statement 1;</span>
+            <span>&#9;Statement 2;</span>
+            <span>&#9;Statement 3;</span>
+            <span>}<span class="comment dtab">&#9;// End of compound statement</span></span>
+          </code>
+        </div>
+        <p>The entire block is considered a single statement (composed itself of multiple substatements). Whenever a generic statement is part of the syntax of a flow control statement, this can either be a simple statement or a compound statement.</p>
+      </article>
+    </section>
+    <section class="main-section" id="Decision_Making">
+      <header>Decision Making</header>
+      <article>
+        Decision making structures require that the programmer specify one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.
+        <p>C++ programming language provides following types of decision making statements.</p>
+        <table>
+          <caption>conditional statements</caption>
+          <thead>
+            <tr>
+              <th scope="col">statement</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>if</code> statement</td>
+              <td>An ‘if’ statement consists of a boolean expression followed by one or more statements.</td>
+            </tr>
+            <tr>
+              <td><code>if...else</code> statement</td>
+              <td>An ‘<code>if</code>’ statement can be followed by an optional ‘<code>else</code>’ statement, which executes when the boolean expression is false.</td>
+            </tr>
+            <tr>
+              <td><code>switch</code> statement</td>
+              <td>A ‘<code>switch</code>’ statement allows a variable to be tested for equality against a list of values.</td>
+            </tr>
+            <tr>
+              <td><code>nested if</code> statement</td>
+              <td>You can use one ‘<code>if</code>’ or ‘<code>else if</code>’ statement inside another ‘<code>if</code>’ or ‘<code>else if</code>’ statement(s).</td>
+            </tr>
+            <tr>
+              <td><code>nested switch</code> statement</td>
+              <td>You can use one ‘<code>switch</code>’ statement inside another ‘<code>switch</code>’ statement(s).</td>
+            </tr>
+          </tbody>
+        </table>
+        <article class="sub-article" id="if_statement">
+          <h3>if statement</h3>
+          Use the if statement to specify a block of C++ code to be executed if a condition is true.
+          <div class="syntax box-m">
+            <code class="code-line">
+              <span><span class="mcode">if</span> (condition) {</span>
+              <span class="comment">&#9;// block of code to be executed if the condition is true</span>
+              <span>}</span>
+            </code>
+          </div>
+          The <code>if</code> statement evaluates the <code>condition</code> inside the parentheses <code>( )</code>.
+          <ol>
+            <li>If the <code>condition</code> evaluates to <code>true</code>, the code inside the body of <code>if</code> is executed.</li>
+            <li>If the <code>condition</code> evaluates to <code>false</code>, the code inside the body of <code>if</code> is skipped.</li>
+          </ol>
+          <p class="note">that <code>if</code> is in lowercase letters. Uppercase letters (If or IF) will generate an error.
+          </p>
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+                <span class="lnum">&ensp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>() {</span>
+                <span class="lnum">&#9;<span class="comment">// local variable declaration:</span></span>
+                <span class="lnum">&#9;<span class="varcode">int</span> <var>a</var> = 10;</span>
+                <span class="lnum">&#9;</span>
+                <span class="lnum">&#9;<span class="comment">// check the boolean condition</span></span>
+                <span class="lnum">&#9;<span class="mcode">if</span>( <var>a</var> &lt; 20 ) {</span>
+                <span class="lnum">&#9;&#9;<span class="comment">// if condition is true then print the following</span></span>
+                <span class="lnum">&#9;&#9;cout &lt;&lt; <span class="scode">"a is less than 20;"</span> &lt;&lt; endl;</span>
+                <span class="lnum">&#9;}</span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"value of a is : "</span> &lt;&lt; <var>a</var> &lt;&lt; endl;</span>
+                <span class="lnum">&#9;</span>
+                <span class="lnum">&#9;<span class="mcode">return</span> 0;</span>
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+              <samp>
+                <span>a is less than 20;</span>
+                <span>value of a is : 10</span>
+              </samp>
+            </div>
+          </div>
+        </article>
+        <article class="sub-article" id="if_else_statement">
+          <h3>if...else statement</h3>
+          Use the <code>else</code> statement to specify a block of code to be executed if the condition is <code>false</code>.
+          <div class="syntax box-m">
+            <code class="code-line">
+              <span><span class="mcode">if</span> (condition) {</span>
+              <span class="comment">&#9;// executed if the condition is true</span>
+              <span>}</span>
+              <span><span class="mcode">else</span> {</span>
+            <span class="comment">&#9;// executed if the condition is false</span>
+              <span>}</span>
+            </code>
+          </div>
+          <div class="code-cont">
+          <div class="ex-div box-m">
+            <code class="code-line">
+              <span><span class="varcode">int</span> <var>time</var> = 20;</span>
+              <span><span class="mcode">if</span> (<var>time</var> &lt; 18) {</span>
+              <span>&#9;cout &lt;&lt; <span class="scode">"Good day."</span>;</span>
+              <span>}</span> 
+              <span><span class="mcode">else</span> {</span>
+              <span>&#9;cout &lt;&lt; <span class="scode">"Good evening."</span>;</span>
+              <span>}</span>
+            </code>
+          </div>
+          <div class="output box-m">
+            <samp><span>Good evening.</span></samp>
+          </div>
+          </div>
+          In the example above, time (20) is greater than 18, so the condition is <code>false</code>. Because of this, we move on to the <code>else</code> condition and print to the screen "Good evening". If the time was less than 18, the program would print "Good day".
+        </article>
+        <article class="sub-article" id="if_ladder">
+          <h3>if-else-if Ladder Statement</h3>
+          In C++, the if-else-if ladder helps the user decide from among multiple options. The C++ if statements are executed from the top down. As soon as one of the conditions controlling the if is true, the statement associated with that if is executed, and the rest of the C++ else-if ladder is bypassed. If none of the conditions is true, then the final statement will be executed.
+          <p>When using <code>if</code>, <code>else if</code>, <code>else</code> statements there are few points to keep in mind.</p>
+          <ul>
+            <li>An if can have zero or one else's and it must come after any else if's</li>
+            <li>An if can have zero to many else if's and they must come before the else.</li>
+            <li>Once an else if succeeds, none of he remaining else if's or else's will be tested.</li>
+          </ul>
+          <div class="syntax box-m">
+            <code class="code-line">
+              <span><span class="mcode">if</span> (condition 1) {</span>
+              <span class="comment">&#9;// Executes when the condition 1 is true</span>
+              <span>}</span>
+              <span><span class="mcode">else if</span> (condition 2) {</span>
+              <span class="comment">&#9;// Executes when the condition 2 is true</span>
+              <span>}</span>
+              <span><span class="mcode">else if</span> (condition 3) {</span>
+              <span class="comment">&#9;// Executes when the condition 3 is true</span>
+              <span>}</span>
+              <span><span class="mcode">else</span> {</span>
+              <span class="comment">&#9;// executes when the none of the condition is true.</span>
+              <span>}</span>
+            </code>
+          </div>
+          <p>For Example:</p>
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+                <span class="lnum">}</span>
+               
+                <span class="lnum">&#9;<span class="comment">// local variable declaration:</span></span>
+                <span class="lnum">&#9;<span class="varcode">int</span> <var>a</var> = -8;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Check if the number is positive</span></span>
+                <span class="lnum">&#9;<span class="mcode">if</span> (<var>a</var> &gt; 0)</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Value of a is Positive"</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Check if the number is negative</span></span>
+                <span class="lnum">&#9;<span class="mcode">else if</span> (<var>a</var> &lt; 0) {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Value of a is Negative"</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// If the number is neither positive nor negative</span></span>
+                <span class="lnum">&#9;<span class="mcode">else</span></span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Value of a is Zero"</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+              <samp><span>Value of a is Negative</span></samp>
+            </div>
+          </div>
+          <p>An if statement can be followed by an optional else if...else statement, which is very usefull to test various conditions using single if...else if statement.</p>
+
+          <p class="note">As you may also have noticed, if the body contains only single statement, we can skip the braces <code>{}</code>.</p>
+
+          Onther Example that Print the day name using day number:
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+                <span class="lnum">{</span>
+                <span class="lnum">&#9;<span class="varcode">int</span> <var>day</var> = 4;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Determine the day name using if-else if ladder</span></span>
+                <span class="lnum">&#9;<span class="mcode">if</span> (<var>day</var> == 1) {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Monday"</span>;</span>
+                <span class="lnum">&#9;}<span class="mcode"> else if</span> (<var>day</var> == 2) {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Tuesday"</span>;</span>
+                <span class="lnum">&#9;}<span class="mcode"> else if</span> (<var>day</var> == 3) {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Wednesday"</span>;</span>
+                <span class="lnum">&#9;}<span class="mcode"> else if</span> (<var>day</var> == 4) {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Thursday"</span>;</span>
+                <span class="lnum">&#9;}<span class="mcode"> else if</span> (<var>day</var> == 5) {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Friday"</span>;</span>
+                <span class="lnum">&#9;}<span class="mcode"> else if</span> (<var>day</var> == 6) {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Saturday"</span>;</span>
+                <span class="lnum">&#9;}<span class="mcode"> else if</span> (<var>day</var> == 7) {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Sunday"</span>;</span>
+                <span class="lnum">&#9;}<span class="mcode"> else </span>{</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Invalid day number"</span>;</span>
+                <span class="lnum">&#9;}</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+              <samp><span>Thursday</span></samp>
+            </div>
+          </div>
+        </article>
+        <article class="sub-article" id="nested_if_else">
+          <h3>Nested if-else Statement</h3>
+          Nested if-else statements are those statements in which there is an if statement inside another if else. We use nested if-else statements when we want to implement multilayer conditions (condition inside the condition inside the condition and so on). C++ allows any number of nesting levels.
+          <div class="syntax box-m">
+            <code class="code-line">
+              <span><span class="mcode">if</span> (condition 1) {</span>
+              <span class="comment">&#9;// Code to be executed </span>
+              <span><span class="mcode">&#9;if</span> (condition 2) {</span>
+              <span class="comment dtab">&#9;// Code to be executed </span>
+              <span>&#9;}</span>
+              <span><span class="mcode">&#9;else</span> {</span>
+              <span class="comment dtab">&#9;// Code to be executed </span>
+              <span>&#9;}</span>
+              <span>}</span>
+              <span><span class="mcode">else</span> {</span>
+              <span class="comment">&#9;// Code to be executed </span>
+              <span>}</span>
+            </code>
+          </div>
+          in the above syntax of nested if-else statements, the inner if-else statement is executed only if ‘condition1’ becomes true otherwise else statement will be executed and this same rule will be applicable for inner if-else statements.
+          <p>Let’s take a look at a simple example:</p>
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+                <span class="lnum">{</span>
+                
+                <span class="lnum">&#9;<span class="varcode">int</span> <var>n</var> = 6;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="comment">// Outer if statement</span></span>
+                <span class="lnum">&#9;<span class="mcode">if</span> (<var>n</var> % 2 == 0) {</span>
+                <span class="lnum dtab">&#9;<span class="comment">// Inner if statement</span></span>
+                <span class="lnum"><span class="mcode dtab">&#9;if</span> (<var>n</var> % 3 == 0) {</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Divisible by 2 and 3"</span>;</span>
+                <span class="lnum dtab">&#9;}</span>
+                <span class="lnum dtab"><span class="mcode">&#9;else</span> {</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Divisible by 2 but not 3"</span>;</span>
+                <span class="lnum dtab">&#9;}</span>
+                <span class="lnum">&#9;}</span>
+                <span class="lnum">&#9;<span class="mcode">else</span> {</span>
+                <span class="lnum dtab">&#9;cout &lt;&lt; <span class="scode">"Not Divisible by 2"</span>;</span>
+                <span class="lnum">&#9;}</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="mcode">return </span>0;</span>
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+              <samp><span>Divisible by 2 and 3</span></samp>
+            </div>
+          </div>
+          <strong>Explanation:</strong> In the above program, the outer if statement checks whether <var>n</var> is divisible by 2 and the inner if statement checks if <var>n</var> is divisible by 3. But as inner if is nested, the divisibly check with 3 is only performed if <var>n</var> is divisible by 2.
+        </article>
+        <article class="sub-article" id="switch_statement">
+          <h3>Switch Statement in C++</h3>
+          In C++, the switch statement is a flow control statement that is used to execute the different blocks of statements based on the value of the given expression. It is an alternative to the long if-else-if ladder which provides an easy way to execute different parts of code based on the value of the expression.
+          <div class="syntax box-m">
+            <code class="code-line">
+              <span><span class="mcode">switch</span> (expression) {</span>
+              <span>&#9;<span class="mcode">case</span> value_1:</span>
+              <span class="comment dtab">&#9;// statements;</span>
+              <span class="mcode dtab">&#9;break;</span>
+              <span>&#9;<span class="mcode">case</span> value_2:</span>
+              <span class="comment dtab">&#9;// statements;</span>
+              <span class="mcode dtab">&#9;break;</span>
+              <span>&#9;<span class="mcode">default</span>:</span>
+              <span class="comment dtab">&#9;// default statements;</span>
+              <span class="mcode dtab">&#9;break;</span>
+              <span>}</span>
+            </code>
+          </div>
+          <h4>Rules of the switch Statement:</h4>
+          There are some rules that we need to follow when using switch statements in C++. They are as follows:
+          <ol>
+            <li>The case value must be either int or char type.</li>
+            <li>There can be any number of cases.</li>
+            <li>No duplicate case values are allowed.</li>
+            <li>Each statement of the case can have a break statement. It is optional.</li>
+            <li>The default Statement is also optional.</li>
+          </ol>
+          <div class="note">
+              <p>The <code>default</code> case is executed if none of the cases are matched.</p>
+              <p>The <code>break</code> keyword in each case is used to break out of the <code>switch</code> statement after the matching case is found. Otherwise, all the statements after the matching case will be executed.</p>
+          </div>
+          for example a program to tell the user to enter a day Number if the user enter number 4 the program will Print the Day Name Using Day Number :
+          <div class="code-cont">
+            <div class="main-code box-m">
+              <code class="code-line">
+                <span class="lnum"><span class="library">#include</span><span class="italict"> &lt;iostream&gt;</span></span>
+                <span class="lnum"><span class="mcode">using namespace </span><span class="fcode">std</span>;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum"><span class="varcode">int </span><span class="fcode">main</span>()</span>
+                <span class="lnum">{</span>
+                <span class="lnum">&#9;<span class="varcode">int</span> <var>day</var>;</span>
+                <span class="lnum">&#9;cout &lt;&lt; <span class="scode">"Please Enter a day number: "</span>;</span>
+                <span class="lnum">&#9;cin &gt;&gt; day;</span>
+                <span class="lnum">&thinsp;</span>
+                <span class="lnum">&#9;<span class="mcode">switch</span> (<var>day</var>) {</span>
+                <span class="lnum dtab">&#9;<span class="mcode">case</span> 1:</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Monday"</span>;</span>
+                <span class="lnum ttab">&#9;<span class="mcode">break</span>;</span>
+                
+                <span class="lnum dtab">&#9;<span class="mcode">case</span> 2:</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Tuesday"</span>;</span>
+                <span class="lnum ttab">&#9;<span class="mcode">break</span>;</span>
+                
+                <span class="lnum dtab">&#9;<span class="mcode">case</span> 3:</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Wednesday"</span>;</span>
+                <span class="lnum ttab">&#9;<span class="mcode">break</span>;</span>
+                
+                <span class="lnum dtab">&#9;<span class="mcode">case</span> 4:</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Thursday"</span>;</span>
+                <span class="lnum ttab">&#9;<span class="mcode">break</span>;</span>
+                
+                <span class="lnum dtab">&#9;<span class="mcode">case</span> 5:</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Friday"</span>;</span>
+                <span class="lnum ttab">&#9;<span class="mcode">break</span>;</span>
+                
+                <span class="lnum dtab">&#9;<span class="mcode">case</span> 6:</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Saturday"</span>;</span>
+                <span class="lnum ttab">&#9;<span class="mcode">break</span>;</span>
+                
+                <span class="lnum dtab">&#9;<span class="mcode">case</span> 7:</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Sunday"</span>;</span>
+                <span class="lnum ttab">&#9;<span class="mcode">break</span>;</span>
+                <span class="lnum dtab">&#9;<span class="mcode">default</span> :</span>
+                <span class="lnum ttab">&#9;cout &lt;&lt; <span class="scode">"Invalid day number"</span>;</span>
+                <span class="lnum ttab">&#9;<span class="mcode">break</span>;</span>
+                <span class="lnum">&#9;}</span>
+                <span class="lnum">&#9;<span class="mcode">return</span> 0;</span>
+                <span class="lnum">}</span>
+              </code>
+            </div>
+            <div class="output box-m">
+               <samp>
+                <span>Please Enter a day number: <kbd>4</kbd></span>
+                Thursday</samp>
+              </div>
+          </div>
+        </article>
+      </article>
+    </section> 
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article class="footer">
+        <p>All the documentation in this page is taken from :</p>
+          <ul>
+            <li><a href="https://cplusplus.com/doc" target="_blank">cplusplus.com</a></li>
+            <li><a href="https://www.tutorialspoint.com/cplusplus/index.htm" target="_blank">C++ Tutorial - tutorialspoint</a></li>
+            <li><a href="https://www.geeksforgeeks.org/c-plus-plus/" target="_blank">C++ Programming Language - GeeksforGeeks</a></li>
+            <li><a href="https://www.programiz.com/cpp-programming" target="_blank">Learn C++ Programming - programiz.com</a></li>
+          </ul>
+          </article>
+    </section>
+  </main>
+
+</body>
+</html>

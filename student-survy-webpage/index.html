@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/test.css" type="text/css" />
+    <title>Student Survay Form</title>
+  </head>
+  <body>
+    
+      <h1 id="title">Student Survay</h1>
+      <p id="description">
+         it's is essential for us teachers and academic institutes to improve continuously,<br> it's a great idea to know the perceptions and
+        opinions of our students.
+      </p>
+  
+    <form id="survay-form">
+        <label id="name-label" for="name">Name :</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter your name"
+          name="name-text"
+          class="form-control"
+          required
+          value
+        />
+        <label id="email-label" for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          name="email-text"
+          class="form-control"
+          required
+          value
+        />
+        <label id="number-label" for="number">Age:</label>
+        <input
+          type="number"
+          id="number"
+          min="12"
+          max="50"
+          placeholder="Enter your age"
+          name="age-text"
+          class="form-control"
+          value
+        />
+
+        <p>Given a chance, what is one change that you would like to see?</p>
+        <select name="change" id="dropdown" class="form-control">
+          <option disabled selected >Select Change</option>
+          <option value="teaching">Teaching Method</option>
+          <option value="time">Time taken for chapter</option>
+          <option value="activities">Extracurricular activities</option>
+          <option value="other">Other</option>
+        </select>
+        
+        <p>Do you have supportive classmates?</p>
+        <label for="ra-1"><input type="radio" name="classmates" id="ra-1" class="radio-button" value="yes" /> Yes, extremely supportive.</label>
+        <label for="ra-2"><input type="radio" name="classmates" id="ra-2" class="radio-button" value="maybe" /> Neither supportive, nor unsupportive.</label>
+        <label for="ra-3"><input type="radio" name="classmates" id="ra-3" class="radio-button" value="no" /> No, extremely unsupportive.</label>
+        
+        <p>Which activities in the classroom do you enjoy the most?</p>
+        <label for="fast-facts"><input type="checkbox" id="fast-facts" value="fast" class="checkbox-button" name="activities"/> Fast Facts.</label>
+              <label for="memory"><input type="checkbox" id="memory" value="memory" class="checkbox-button" name="activities" /> Memory.</label>
+        <label for="treasure"><input type="checkbox" id="treasure" value="treasure" class="checkbox-button" name="activities" /> Treasure Hunt.</label>
+                 <label for="other"><input type="checkbox" id="other" value="other" class="checkbox-button" name="activities" /> Other.</label>
+    
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea
+          name="Comments"
+          id="Comments"
+          class="form-control"
+          cols="30"
+          rows="10"
+          placeholder="Enter your comment here..."
+          value
+        ></textarea>
+      
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
